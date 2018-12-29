@@ -45,6 +45,16 @@ public class Class {
 	// this() and super() has to be the first statement in constructors
 	public Class() {
 		System.out.println("Constructor");
+
+		// Local Variables have no default initialization
+		// Multiple Variables of same type separated by comma
+		int number, anotherNum;
+
+		// Octal, Hexa and Binary numbers
+		number = 072;
+		number = 0xA2;
+		number = 0b110;
+
 	}
 
 	// Called at most once, when object is garbage collecting

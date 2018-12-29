@@ -36,15 +36,6 @@ public class Main {
 	 *	Entry point of program
 	 */
 	public static void main(String[] args){
-		// Local Variables have no default initialization
-		// Multiple Variables of same type separated by comma
-		int number, anotherNum;
-
-		// Octal, Hexa and Binary numbers
-		number = 072;
-		number = 0xA2;
-		number = 0b110;
-
 		if(args.length < 1) return;
 
 		out.println("Starting: " + args[0]);
