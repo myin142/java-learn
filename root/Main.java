@@ -47,6 +47,7 @@ public class Main {
 		switch(args[0]){
 			case "defaultClass": new Class(); break;
 			case "exception": new Exceptions(); break;
+			case "operation": new Operations(); break;
 		}
 	}
 }
