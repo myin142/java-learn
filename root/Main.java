@@ -10,6 +10,9 @@ import root.util.*;
 import root.oop.*;
 import root.oop.Class;
 
+// Used to import static members
+import static java.lang.System.out;
+
 // Will be automatically imported
 // import java.lang.*
 
@@ -44,6 +47,7 @@ public class Main {
 
 		if(args.length < 1) return;
 
+		out.println("Starting: " + args[0]);
 		switch(args[0]){
 			case "defaultClass": new Class(); break;
 			case "exception": new Exceptions(); break;
