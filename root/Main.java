@@ -52,6 +52,7 @@ public class Main {
 			case "defaultClass": new Class(); break;
 			case "exception": new Exceptions(); break;
 			case "operation": new Operations(); break;
+			case "coreApi": new CoreApi(); break;
 		}
 	}
 }
