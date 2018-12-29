@@ -117,10 +117,6 @@ public class CoreApi{
 
 		// Multidimensional Array like normal array, just with more []
 
-		// Varargs: String... strings
-		// Treated like array
-		// Only allowed at the end of method parameters -> only one per method
-
 		/* ArrayList implements List */
 		// List has equals() implemented
 		// Non-generic version possible: all types can be saved inside
