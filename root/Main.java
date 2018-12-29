@@ -33,8 +33,6 @@ public class Main {
 	 *	Entry point of program
 	 */
 	public static void main(String[] args){
-		Class c = new Class();
-
 		// Local Variables have no default initialization
 		// Multiple Variables of same type separated by comma
 		int number, anotherNum;
@@ -43,5 +41,12 @@ public class Main {
 		number = 072;
 		number = 0xA2;
 		number = 0b110;
+
+		if(args.length < 1) return;
+
+		switch(args[0]){
+			case "defaultClass": new Class(); break;
+			case "exception": new Exceptions(); break;
+		}
 	}
 }
