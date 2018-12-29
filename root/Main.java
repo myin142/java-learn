@@ -8,6 +8,9 @@ package root;
 import util.*;
 import oop.*;
 
+// Will be automatically imported
+// import java.lang.*
+
 /*	Multi line comment
  *
  *	Outer class can be public or [default]
