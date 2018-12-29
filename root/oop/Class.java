@@ -1,11 +1,13 @@
+/* Topics:
+ *	Initializers
+ *	Constructor
+ *	Identifiers Name
+ *	Members
+ *	Garbage Collection
+ */
+
 package root.oop;
 
-// public: accessible from everywhere
-// protected: accessible from subclasses and package
-// [default]: accessible from package
-// private: accessible from same class
-//
-// Outer class can be only public or [default]
 public class Class {
 
 	// Order of Initialization:
@@ -25,10 +27,10 @@ public class Class {
 	//	Start with letter, $ or _
 	//	After start including numbers
 	//	Not Java reserved words
-	public int number;
-	protected String text;
+	int number;
+	String text;
 	boolean binary;
-	private char character;
+	char character;
 
 	// Instance Initializer Block. Called everytime class gets instantiated
 	// Underscore allowed inside numbers. Only not at start/end or after/before decimal point.
@@ -60,6 +62,6 @@ public class Class {
 	// Called at most once, when object is garbage collecting
 	// System.gc() - suggests garbage collection, but can be ignored
 	protected void finalize() {
-		System.out.println("Garbage collecting");
+		System.out.println("Garbage collecting"); // Will not be called when program exists before GC
 	}
 }
