@@ -46,6 +46,7 @@ public class Main {
 		if(args.length < 1) return;
 
 		out.println("Starting: " + args[0]);
+		out.println();
 		switch(args[0]){
 			case "defaultClass": new Class(); break;
 			case "exception": new Exceptions(); break;
