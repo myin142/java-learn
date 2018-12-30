@@ -59,6 +59,12 @@ public class Class {
 
 	}
 
+	// Overloading Constructors possible
+	// Use this() to call this classes constructors
+	public Class(int i){
+		this();
+	}
+
 	// Called at most once, when object is garbage collecting
 	// System.gc() - suggests garbage collection, but can be ignored
 	protected void finalize() {
