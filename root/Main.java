@@ -47,11 +47,12 @@ public class Main {
 
 		out.println("Starting: " + args[0]);
 		out.println();
-		switch(args[0]){
-			case "defaultClass": new Class(); break;
+		switch(args[0].toLowerCase()){
+			case "defaultclass": new Class(); break;
 			case "exception": new Exceptions(); break;
 			case "operation": new Operations(); break;
-			case "coreApi": new CoreApi(); break;
+			case "coreapi": new CoreApi(); break;
+			default: System.out.println("No Default Program specified");
 		}
 	}
 }
