@@ -52,6 +52,7 @@ public class Main {
 			case "exception": new Exceptions(); break;
 			case "operation": new Operations(); break;
 			case "coreapi": new CoreApi(); break;
+			case "lambda": new Lambda(); break;
 			default: System.out.println("No Default Program specified");
 		}
 	}
