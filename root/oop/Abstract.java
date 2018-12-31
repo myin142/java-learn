@@ -3,6 +3,16 @@
  */
 package root.oop;
 
+/**
+ * Summary
+ * 
+ *  First concrete class implements all abstract methods
+ *  Variables can only be hidden
+ *  Static Methods can only be hidden
+ *  Methods can be overridden
+ * 
+ */
+
 // Abstract methods has to be inside abstract class
 //  Cannot be instantiated directly
 //  Cannot be private or final

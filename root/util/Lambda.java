@@ -6,6 +6,14 @@ package root.util;
 
 import java.util.function.Predicate;
 
+/**
+ * Summary
+ * 
+ *  Predicate interface used to pass lambda expression
+ *  Used if we want to check for one boolean expression for multiple classes
+ * 
+ */
+
 public class Lambda{
 
     public Lambda(){

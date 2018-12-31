@@ -6,6 +6,17 @@ package root.util;
 
 import java.io.*;
 
+/**
+ * Summary
+ * 
+ *  Runtime Exception can be thrown anywhere
+ *  Checked Exception has to be declared or handled
+ * 	Error should not be handled by programmer, but can also be declared and handled
+ *	Try block needs catch or finally block
+ *	Unreachable catch clauses causes compiler error
+ * 
+ */
+
 // Exceptions alters program flow when Java does not know what to do
 // Types of Exceptions
 //	Unchecked Exceptions: RuntimeException, can be thrown anywhere

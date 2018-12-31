@@ -3,6 +3,16 @@
  */
 package root.oop;
 
+/**
+ * Summary:
+ * 
+ *  Variables are always public, static and final
+ *  Static methods do not get inherited and assumed public
+ *  Default methods have implementation and only inside interface
+ *  Normal methods assumed public and abstract
+ * 
+ */
+
 // Everything assumed abstract, cannot be final. And vice-versa
 // Everything assumed public, cannot be private and protected.
 //

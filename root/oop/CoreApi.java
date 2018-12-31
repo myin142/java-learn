@@ -21,6 +21,18 @@ import java.time.Period;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
 
+/**
+ * Summary
+ * 
+ * 	String are immutable and literals are pooled
+ * 	StringBuilder are mutable. StringBuffer like StringBuilder only immutable -> thread-safe
+ * 	== compares reference, equals() compares reference if it is not implemented
+ * 	List has equals() implemented, list.toArray()
+ * 	Arrays.asList() - Fixed sized list, backed with array
+ * 	DateTime classes are immutable and invalid values will throw runtime exception
+ * 
+ */
+
 public class CoreApi{
 	
 	public CoreApi(){

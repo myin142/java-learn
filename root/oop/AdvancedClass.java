@@ -8,6 +8,19 @@
  */
 package root.oop;
 
+/**
+ * Summary
+ * 
+ *  Access Modifers: public, protected, private, [default]
+ *  Optional Specifiers: static, abstract, final
+ *  Extending class, implementing interface
+ *  Overriding: same name and parameters
+ *  Overloading: same name, different parameters
+ *  Encapsulation: all variables private, getter/setter public
+ *  JavaBeans Naming: is/get/set + property name (first uppercase)
+ * 
+ */
+
 // Access Modifiers:
 //  public: accessible from everywhere
 //  protected: accessible from subclasses and package

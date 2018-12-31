@@ -8,6 +8,16 @@
 
 package root.oop;
 
+/**
+ * Summary
+ * 
+ *	Order of Initialization: Superclass, Static, Instance, Constructor
+ *	Identifiers: Letter, $, _, numbers(not at start)
+ *	(Default) Constructor: super() or this() is first statement
+ *	finalize() - when GC and at most once
+ * 
+ */
+
 public class Class {
 
 	// Order of Initialization:

@@ -4,6 +4,16 @@
  */
 package root.util;
 
+/**
+ * Summary
+ * 
+ * 	Operation order.
+ * 	Operation between different types -> smaller will be promoted to larger
+ * 	All types smaller than int, will be promoted to int on operations (except unary)
+ * 	Assignments also return value
+ * 
+ */
+
 // Operation order: if same, then left-to-right
 //	Post-unary:				x++, x--
 //	Pre-unary:				++x, --x
