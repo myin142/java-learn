@@ -47,7 +47,7 @@ public class CoreApi{
 		// String is immutable: any changes has to be saved in a variable again
 		String str = "String";
 
-		// String concat from left to right
+		// String concat from left to right (after concat String not literal anymore)
 		//	both numeric -> addition
 		//	either is String -> concat
 		System.out.println(1 + 1 + " " + str);
