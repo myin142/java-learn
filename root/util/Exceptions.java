@@ -54,6 +54,9 @@ public class Exceptions {
 			// NumberFormatException
 			//Integer.parseInt("abc");
 		}
+
+		// compiler knows which exceptions can be thrown
+		// catch(TestException e){}
 		
 		// If exception is catch and handled, code continues normally after catch/finally
 		catch(RuntimeException e){ throw e; }
@@ -79,3 +82,5 @@ public class Exceptions {
 	private void throwNoClassDefFound(){ throw new NoClassDefFoundError("Class not found at runtime"); }
 
 }
+
+class TestException extends Exception{}

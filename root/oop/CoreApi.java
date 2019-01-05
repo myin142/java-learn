@@ -132,7 +132,11 @@ public class CoreApi{
 		/* ArrayList implements List */
 		// List has equals() implemented
 		// Non-generic version possible: all types can be saved inside
+		// Generic on only one side allowed
 		ArrayList<Integer> list = new ArrayList<>();	// int/List/void
+		List l1 = new ArrayList();
+		List l2 = new ArrayList<Integer>();
+		List<Integer> l3 = new ArrayList();
 
 		// Important Methods
 		// Number literals get autoboxed to Integer objects

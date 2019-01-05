@@ -10,7 +10,7 @@
 // Optional, but has to be first statement in file
 package root;
 
-// Optional, has to be after package
+// Optional, has to be after package (needs full packages name)
 // Wildcards must be at the end
 // Specific import prefered over wildcards (when conflicting class names)
 import root.util.*;

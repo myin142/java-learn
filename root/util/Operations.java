@@ -79,16 +79,20 @@ public class Operations{
 		//
 		// If-then-(else) statement
 		// Ternary Operator: (boolean ? true : false)
+		//					left-hand		right-hand
 		if(true){}
 		else{}
 		
-		// Switch - case values must be compile-time constants
+		// Switch - case values must be compile-time constants and non duplicates
 		// Supported types:
 		//	byte, short, int, char + Object versions
 		//	String
 		//	Enum
+		final int value = 0;
 		switch(0){
 			case 0: break;
+			//case value: break; // Duplicate, both lines would count as compiler error
+
 			default: break;
 		}
 
