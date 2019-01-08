@@ -58,6 +58,7 @@ public class Main {
 
 			// OCP
 			case "enum": new Enum(); break;
+			case "nestedclass": new NestedClass(); break;
 
 			default: System.out.println("No Default Program specified");
 		}
