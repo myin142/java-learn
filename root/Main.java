@@ -16,6 +16,7 @@ package root;
 import root.util.*;
 import root.oop.*;
 import root.oop.Class;
+import root.oop.Enum;
 
 // Used to import static members
 import static java.lang.System.out;
@@ -54,6 +55,10 @@ public class Main {
 			case "coreapi": new CoreApi(); break;
 			case "advancedclass": new AdvancedClass(); break;
 			case "lambda": new Lambda(); break;
+
+			// OCP
+			case "enum": new Enum(); break;
+
 			default: System.out.println("No Default Program specified");
 		}
 	}
