@@ -71,6 +71,7 @@ public class AdvancedClass extends Abstract implements Interface{
     // 
     // Java will use most specific parameter: (Note: will only be converted once)
     //  Exact match by type
+    //  Matching a superclass type
     //  Larger primitive type
     //  Autoboxed type
     //  Varargs

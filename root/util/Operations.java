@@ -31,6 +31,8 @@ public class Operations{
 
 	public Operations() {
 		// Numeric Promotion to larger types (floating-point larger than integers)
+		// = automatically promoted smaller to larger types
+		// casting needed when from larger to smaller (except for compound assignments like += and -=)
 		{
 			long x = 1 + 1L; // int promoted to long
 			double y = 1.0f + 1.0; // float promoted to double
@@ -52,6 +54,9 @@ public class Operations{
 			print("Post: " + x++);	// Prints 0 then increments to 1
 			print("Pre: " + ++x);	// Increment from 1 to 2 and prints value
 		}
+
+		// += and -= not allowed right after declaration
+		// && has higher precedence than ||
 
 		// Binary Operators
 		{

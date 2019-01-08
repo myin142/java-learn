@@ -13,7 +13,8 @@ package root.oop;
  * 
  *	Order of Initialization: Superclass, Static, Instance, Constructor
  *	Identifiers: Letter, $, _, numbers(not at start)
- *	(Default) Constructor: super() or this() is first statement
+ *	Constructor: super() or this() is first statement
+ *	Default Constructor: inserted from compiler non specified
  *	finalize() - when GC and at most once
  * 
  */
@@ -53,6 +54,7 @@ public class Class {
 	static { decimal = 1.0f; System.out.println("Static Initializer"); }
 
 	// Default Constructor. If not specified, automatically inserted from compiler
+	// Default Constructor != User-defined Constructor
 	// All constructors without explicit super call, gets default super() call inserted
 	// this() and super() has to be the first statement in constructors
 	public Class() {

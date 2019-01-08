@@ -92,7 +92,7 @@ public class CoreApi{
 		// Capacity: number of characters a sequence can hold
 		StringBuilder builder = new StringBuilder("String");		// CharSequence/int/String/void
 
-		// Like StringBuilder only immutable, thus making it thread-safe
+		// Like StringBuilder only thread-safe
 		StringBuffer buffer = new StringBuffer();
 
 		// Important StringBuilder Methods
@@ -108,7 +108,7 @@ public class CoreApi{
 	}
 
 	private void arrays(){
-		// Creating Array:
+		// Creating Array: Treated like Object, get default values
 		// int numbers[] = new int[3];
 		Integer[] numbers = new Integer[]{ 3, 1, 2 };
 		// int[] numbers = { 3, 1, 2 }; // -> anonymous array, only in declaration allowed
@@ -134,9 +134,9 @@ public class CoreApi{
 		// Non-generic version possible: all types can be saved inside
 		// Generic on only one side allowed
 		ArrayList<Integer> list = new ArrayList<>();	// int/List/void
-		List l1 = new ArrayList();
-		List l2 = new ArrayList<Integer>();
-		List<Integer> l3 = new ArrayList();
+		//List l1 = new ArrayList();
+		//List l2 = new ArrayList<Integer>();
+		//List<Integer> l3 = new ArrayList();
 
 		// Important Methods
 		// Number literals get autoboxed to Integer objects
@@ -145,6 +145,8 @@ public class CoreApi{
 		boolean b1 = list.remove(new Integer(3));		// E (Note: if normal int literal is used, another function will get called)
 		int i0 = list.remove(0);						// int
 		int i1 = list.set(0, 2);						// int, E
+		boolean b4 = list.isEmpty();
+		int i2 = list.size();
 		list.clear();
 		boolean b2 = list.contains(2);					// int
 		boolean b3 = list.equals(new ArrayList<>());	// List
@@ -171,7 +173,15 @@ public class CoreApi{
 		System.out.println(fixedList);
 
 		// Sorting
-		Collections.sort(fixedList);
+		// Uppercase before Lowercase
+		// 1 before 10 before 1000 before 20 before 9
+		// According to ASCII table values
+		List<String> stringList = Arrays.asList("1000", "asd", "ASD", "10", "9", "20", "1");
+		Collections.sort(stringList);
+		System.out.println(stringList);
+
+		// Searching
+		Collections.binarySearch(fixedList, 10);
 	}
 
 	private void dateTimeApi(){
@@ -186,6 +196,8 @@ public class CoreApi{
 		LocalDateTime dateTime = LocalDateTime.of(date, time);		// DATE, TIME
 
 		// Modify. Java knows leap years and also hides secs/nanos
+		// Negative values also possible -> changes to other method (plus -> minus)
+		// Can be chained
 		dateTime = dateTime.plusWeeks(1);							// plusXXX(int)
 		date = date.minusDays(1);									// minusXXX(int)
 		time = time.plusHours(1);
@@ -211,6 +223,11 @@ public class CoreApi{
 		// Parsing
 		date = LocalDate.parse("December 29, 2018, 08:45 PM", formatter);
 		System.out.println(date);
+
+		// Allowed time:
+		//	hour: 0-23
+		//	minute: 0-59
+		System.out.println(LocalTime.of(23, 59));
 	}
 
 }
