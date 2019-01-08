@@ -87,10 +87,10 @@ public class NestedClass{
 
     private void anonymousInner(){
 
-        // Anonymous Inner Class:
+        // Anonymous Inner Class: (like Inner Class)
         // Define class definition directly after creating with new
         // Abstract classes and interfaces can directly be extended/implemented
-        // Cannot extend class and implment interface at the same time
+        // Cannot extend class and implement interface at the same time
         // Can also be defined directly in method parameter
         AbstractClass a = new AbstractClass(){
             void print(){ System.out.println("Anonymous Inner Class"); }
