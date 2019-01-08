@@ -10,8 +10,7 @@ public class Enum{
         // Season.values() gets all enum items as array
         for(Season s : Season.values()){
 
-            // toString() prints name of enum
-            // name() gets name of enum
+            // toString() and name() gets name of enum
             // ordinal() gets ordinal number of enum value
             System.out.println(s + ", " + s.name() + ", " + s.ordinal());
 
