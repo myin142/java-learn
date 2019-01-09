@@ -56,7 +56,8 @@ public class Main {
 			case "advancedclass": new AdvancedClass(); break;
 			case "lambda": new Lambda(); break;
 
-			// OCP
+			case "designprinciple": new DesignPrinciple(); break;
+
 			case "enum": new Enum(); break;
 			case "nestedclass": new NestedClass(); break;
 
