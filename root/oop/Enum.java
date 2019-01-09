@@ -43,7 +43,7 @@ enum Season{
 
     private String characteristic;
 
-    // Enum Constructor, has to be private
+    // Enum Constructor, has to be private or [default]
     // Will be constructed once when Enum is called the first time
     private Season(String character){
         this.characteristic = character;
