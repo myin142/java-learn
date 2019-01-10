@@ -17,6 +17,9 @@ import java.util.Vector;
 import java.util.Queue;
 import java.util.Set;
 
+import java.util.Comparator;
+import java.util.Collections;
+
 // Collection - group of objects contained in single object
 //  List: Ordered collection, allows duplicates, accessed by int index
 //  Set: Collection without duplicates
@@ -149,6 +152,31 @@ public class Collection{
 
         // ArrayDeque no null values. Null values has special meaning
         // Hashtable no null values and keys. Just because. Too old.
+
+
+        /* Searching and Sorting */
+        List<Comparing> cList = new ArrayList<>();
+
+        // If no Comparator specified, List type has to implement Comparable
+        // else compiler error
+        Collections.sort(cList);
+        Collections.sort(cList, new Comparator<Comparing>() {
+            public int compare(Comparing t1, Comparing t2){ return 0; }
+        });
+
+        // Same as sorting
+        // Warning: unsorted list results in undefined values
+        Collections.binarySearch(cList, new Comparing());
+        Collections.binarySearch(cList, new Comparing(), new Comparator<Comparing>() {
+            public int compare(Comparing t1, Comparing t2){ return 0; }
+        });
+
+        // Same applies to sorted collections like: TreeSet, TreeMap
+        // Comparator can be passed to constructor
+        Set<Comparing> tSet = new TreeSet<>(new Comparator<Comparing>() {
+            public int compare(Comparing t1, Comparing t2){ return 0; }
+        });
+        tSet.add(new Comparing());
     }
 
 }
