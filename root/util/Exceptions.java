@@ -22,7 +22,7 @@ public class Exceptions {
 	//		IllegalStateException					Method invoked at illegal time
 	//		UnsupportedOperationException			Operation not supported
 	//		time.DateTimeException					Invalid format for date/time
-	//		util.MissingResourceException			Access non-existing key/resource bundle
+	//		util.MissingResourceException			Access non-existing key/resource bundle, or missing resource
 	//
 	// Checked Exception: (must be handled/declared)
 	//		io.IOException							Problem read/write file, super class of all io exceptions
