@@ -39,6 +39,7 @@ public class NIO2{
         // Path Methods:
         //      toString() | getNameCount(), getName(int) | getFileName(), getParent() | getRoot()
         //      isAbsolute() | toAbsolutePath() | subpath(int start, int endExcluded)
+        //      equals(Path) - compares path string
         //
         //      relativize(Path) - relative path between 2 paths, either both relative or absolute -> else IllegalArgumentException
         //      resolve(Path) - joining paths, if using absolute path -> second will be used
