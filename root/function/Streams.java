@@ -134,7 +134,7 @@ public class Streams{
 			Collectors.toMap(String::length, s->s, String::concat, TreeMap::new)); // Lambda s -> s can be written as Function.identity()
 		System.out.println(map);
 		//
-		//		groupingBy(Function)							/ Create map grouping by specified function
+		//		groupingBy(Function)							/ Create map grouping by specified function (return only keys when needed)
 		//		groupingBy(Function, Collector)					/ optional downstream collector
 		//		groupingBy(Function, Supplier, Collector)		/ optional type
 		//
@@ -143,7 +143,7 @@ public class Streams{
 			Collectors.groupingBy(String::length, TreeMap::new, Collectors.toCollection(TreeSet::new)));
 		System.out.println(group);
 		//
-		//		partitioningBy(Predicate)						/ Create map grouping by specified predicate (2 partitions)
+		//		partitioningBy(Predicate)						/ Create map grouping by specified predicate (always 2 partitions, true and false)
 		//		partitioningBy(Predicate, Collector)			/ optional downstream collector
 		//
 		stream = Stream.of("lions tigers bears".split(" ")); // Need new stream, since old one was already used
