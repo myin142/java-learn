@@ -150,13 +150,6 @@ public class Streams{
 		Map<Boolean, Set<String>> partition = stream.collect(
 			Collectors.partitioningBy(String::isEmpty, Collectors.toCollection(TreeSet::new)));
 		System.out.println(partition);
-
-		Stream<Integer> s = Stream.of(1);
-		IntStream is = s.mapToInt(x -> x);
-		DoubleStream ds = s.mapToDouble(x -> x);
-		Stream<Integer> s2 = ds.mapToInt(x -> x);
-		s2.forEach(System.out::print);
-
     }
 
 }
