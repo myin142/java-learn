@@ -9,6 +9,7 @@ import java.util.TreeSet;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.stream.Collectors;
+import java.util.stream.DoubleStream;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -80,6 +81,7 @@ public class Streams{
 		//		XXXSummaryStatistics summaryStatistics()
 		//			-> getAverage() | getCount() | getMax() | getMin() | getSum()
 		//
+		// Exception: BooleanSupplier
 		// Functional Interface for Primitives: (Interface | Parameter | Return | Method)
 		//		XXXSupplier				0			xxx			getAsXXX
 		//		XXXConsumer				1(xxx)		void		accept
@@ -148,6 +150,13 @@ public class Streams{
 		Map<Boolean, Set<String>> partition = stream.collect(
 			Collectors.partitioningBy(String::isEmpty, Collectors.toCollection(TreeSet::new)));
 		System.out.println(partition);
+
+		Stream<Integer> s = Stream.of(1);
+		IntStream is = s.mapToInt(x -> x);
+		DoubleStream ds = s.mapToDouble(x -> x);
+		Stream<Integer> s2 = ds.mapToInt(x -> x);
+		s2.forEach(System.out::print);
+
     }
 
 }
