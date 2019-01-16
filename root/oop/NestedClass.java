@@ -10,8 +10,7 @@ public class NestedClass{
     private String secret = "Secret";
     
     public NestedClass(){
-        NestedClass outer = this;
-        MemberInnerClass inner = new MemberInnerClass();
+        MemberInnerClass inner = new MemberInnerClass(); // In static method not possible
 
         // Outer class instance can be used to create inner class
         MemberInnerClass.InnerInnerClass innerInner = inner.new InnerInnerClass();
