@@ -53,7 +53,7 @@ public class NestedClass{
         }
     }
 
-    // Interfaces can only be inside top-level classes
+    // Interfaces can only be inside top-level classes or inside static inner class
     // And can be declared private
     private interface InnerInterface{
         void test();
