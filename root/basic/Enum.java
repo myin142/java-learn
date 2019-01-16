@@ -1,7 +1,7 @@
-package root.oop;
+package root.basic;
 
 public class Enum{
-    public Enum(){
+    public static void init(){
 
         // Season.valueOf(String) gets enum from String, must be exact match
         // Otherwise throws IllegalArgumentException
@@ -29,10 +29,13 @@ public class Enum{
 
 // Set of Items whose types are known at compile-time -> constants
 // Enum is a type and cannot be compared to int or be extended
+//
+// Like outer class -> outer enum only public or [default]
 enum Season{
+
     // Semicolon needed when using Constructor or Members
     WINTER("Cold"){
-        public void printName(){} // Overriding abstract method
+        public void printName(){} // Overriding method
     }, SPRING("Natur"){
         public void printName(){}
     }, SUMMER("Hot"){

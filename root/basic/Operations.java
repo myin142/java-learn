@@ -2,7 +2,7 @@
  *	Operations
  *	Statements
  */
-package root.util;
+package root.basic;
 
 /**
  * Summary
@@ -29,7 +29,7 @@ package root.util;
 //	Assignment:				=, +=, -=
 public class Operations{
 
-	public Operations() {
+	public static void init() {
 		// Numeric Promotion to larger types (floating-point larger than integers)
 		// = automatically promoted smaller to larger types
 		// casting needed when from larger to smaller (except for compound assignments like += and -=)
@@ -80,6 +80,22 @@ public class Operations{
 			//	Two object references (including null and String)
 		}
 
+		Sub sub = new Sub();
+
+		// a instanceof b - check if reference point to same:
+		//  instance of b
+		//  subclass of b
+		//  class that implements b
+		boolean b1 = sub instanceof Super;
+		System.err.println("Sub instance of Super: " + b1);
+
+		// Compiler error if checking of unrelated types
+		// boolean b = sub instanceof Other;
+
+		// Except for interfaces -> checked on runtime
+		boolean b2 = sub instanceof Interface;
+		System.out.println("Sub instance of Interface: " + b2);
+
 		// Statements
 		//
 		// If-then-(else) statement
@@ -123,7 +139,7 @@ public class Operations{
 		LABEL: for(;;){
 			array[0]++;
 
-			INNER: while(array[0] > 0){
+			INNER: while(array[0] > 5){
 				continue LABEL;
 			}
 
@@ -131,5 +147,12 @@ public class Operations{
 		}
 	}
 
-	private void print(String str){ System.out.println(str); }
+	private static void print(String str){ System.out.println(str); }
 }
+
+class Super{}
+class Sub extends Super{}
+class Other{}
+
+// Marker Interface: Interface with no members
+interface Interface{}

@@ -1,37 +1,5 @@
-/* Topics:
- *	Access Modifiers
- *	Optional Specifiers
- *	Overriding / Overloading / Hidding
- *	Encapsulation
- *  Inheritance
- *  Polymorphism
- */
 package root.oop;
 
-/**
- * Summary
- * 
- *  Access Modifers: public, protected, private, [default]
- *  Optional Specifiers: static, abstract, final
- *  Extending class, implementing interface
- *  Overriding: same name and parameters
- *  Overloading: same name, different parameters
- *  Encapsulation: all variables private, getter/setter public
- *  JavaBeans Naming: is/get/set + property name (first uppercase)
- * 
- */
-
-// Access Modifiers:
-//  public: accessible from everywhere
-//  protected: accessible from subclasses and package
-//  [default]: accessible from package
-//  private: accessible from same class
-//
-// Optional Specifiers:
-//  static: belongs to class, can be called with instance (even if pointing to NULL)
-//  abstract: not full object
-//  final: no changes allowed (prevent reassignment or overriding)
-//
 // Can only extend one class (All classes extend Object)
 // Can implement multiple interfaces
 //
@@ -62,8 +30,10 @@ public class AdvancedClass extends Abstract implements Interface{
     //  Can throw none, same or subclass of Exception
     //
     // Final Methods cannot be overridden
-    // Re-declaring private methods: not treated as overriding, like hidding
-    void overridableMethod(){ System.out.println("Overridable: " + TEXT); }
+	// Re-declaring private methods: not treated as overriding, like hidding
+	//
+	// @Override to indicate overridden methods
+    @Override void overridableMethod(){ System.out.println("Overridable: " + TEXT); }
 
     // Overloading:
     //  Same name but different parameter
@@ -88,7 +58,7 @@ public class AdvancedClass extends Abstract implements Interface{
     // Compiler does not allow casting to unrelated types (Abstract cannot be converted to CoreApi)
     //
     // Virtual Methods: All non-final. non-static, non-private methods, they can all be overridden
-    private void polymorphMethod(Interface i, Abstract a){
+    private void polymorphMethod(int i, int a){
         //CoreApi x = (CoreApi)a;
     }
 
@@ -101,7 +71,7 @@ public class AdvancedClass extends Abstract implements Interface{
         overridableMethod(0);
         System.out.println();
 
-        polymorphMethod(this, this);
+        //polymorphMethod(this, this);
     }
 
     // Implement all abstract methods
@@ -112,21 +82,4 @@ public class AdvancedClass extends Abstract implements Interface{
     // (Access) | (Specifiers) | Return | Name | Brackets/(Parameter) | (Exception) | Body
     public static final void method() throws Exception{}
 
-    // Encapsulation
-    // All Fields are private
-    // JavaBeans Naming:
-    //  Getter for boolean: isXXX
-    //  Getter for non boolean: getXXX
-    //  Setter for all: setXXX
-    //  set/get/is + propertyName (first uppercase)
-    //
-    // Make class immutable by removing all setters
-    // And use defensive copy to prevent change by reference
-    private int number;
-    private boolean binary;
-
-    public int getNumber(){return number;}
-    public boolean isBinary(){return binary;}
-    public void setNumber(int i){number = i;}
-    public void setBinary(boolean b){binary = b;}
 }

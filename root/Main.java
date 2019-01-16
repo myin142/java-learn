@@ -1,65 +1,58 @@
-/* Topics:
- *	package
- *	import
- *	comments
- *	general
- */
-
-// Single line comment
-//
-// Optional, but has to be first statement in file
 package root;
 
-// Optional, has to be after package (needs full packages name)
-// Wildcards must be at the end
-// Specific import prefered over wildcards (when conflicting class names)
 import root.util.*;
+import root.time.*;
 import root.oop.*;
+import root.basic.*;
+import root.concur.*;
+import root.function.*;
+import root.list.*;
+import root.io.*;
+
 import root.oop.Class;
-import root.oop.Enum;
+import root.basic.Enum;
 
-// Used to import static members
-import static java.lang.System.out;
+import root.db.JDBC;
 
-// Will be automatically imported
-// import java.lang.*
-
-/*	Multi line comment
- *
- *	public class name has to be the same as file name
- *	only one public class allowed
- */
 public class Main {
 
-	/**	Java Doc
-	 *
-	 *	Benefits of Java
-	 *		Object Oriented
-	 *		Encapsulation
-	 *		Platform Independent
-	 *		Robust - Prevents memory leaks
-	 *		Simple - No pointers or operator overloading
-	 *		Secure - Inside JVM
-	 *
-	 *	Entry point of program
-	 */
+	// Entry point of program
 	public static void main(String[] args){
 		if(args.length < 1) return;
 
-		out.println("Starting: " + args[0]);
-		out.println();
+		System.out.println("Starting: " + args[0]);
+		System.out.println();
+
 		switch(args[0].toLowerCase()){
 			case "defaultclass": new Class(); break;
-			case "exception": new Exceptions(); break;
-			case "operation": new Operations(); break;
+			case "operation": Operations.init(); break;
 			case "coreapi": new CoreApi(); break;
 			case "advancedclass": new AdvancedClass(); break;
-			case "lambda": new Lambda(); break;
 
 			case "designprinciple": new DesignPrinciple(); break;
-
-			case "enum": new Enum(); break;
 			case "nestedclass": new NestedClass(); break;
+
+			case "class": Class.init(); break;
+			case "general": General.init(); break;
+			case "enum": Enum.init(); break;
+
+			case "io": IOStream.init(); break;
+			case "nio": NIO2.init(); break;
+
+			case "generic": Generic.init(); break;
+			case "collection": Collection.init(); break;
+
+			case "functional": Functional.init(); break;
+			case "stream": Streams.init(); break;
+
+			case "concurrency": Concurrency.init(); break;
+			case "concurcollection": ConcurCollection.init(); break;
+			case "parallelstream": ParallelStream.init(); break;
+
+			case "database": JDBC.init(); break;
+			case "exception": Exceptions.init(); break;
+			case "localization": Localization.init(); break;
+			case "datetime": DateTime.init(); break;
 
 			default: System.out.println("No Default Program specified");
 		}

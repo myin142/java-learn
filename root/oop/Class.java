@@ -1,24 +1,6 @@
-/* Topics:
- *	Initializers
- *	Constructor
- *	Identifiers Name
- *	Members
- *	Garbage Collection
- */
-
 package root.oop;
 
-/**
- * Summary
- * 
- *	Order of Initialization: Superclass, Static, Instance, Constructor
- *	Identifiers: Letter, $, _, numbers(not at start)
- *	Constructor: super() or this() is first statement
- *	Default Constructor: inserted from compiler non specified
- *	finalize() - when GC and at most once
- * 
- */
-
+// Outer class can be only public or [default]
 public class Class {
 
 	// Order of Initialization:
@@ -27,31 +9,18 @@ public class Class {
 	// Instance Variables and Initializers
 	// Constructor
 
-	// Instance and Class Fields get default initialization
-	//	byte, short, int, long: 0
-	//	float, double: 0.0
-	//	boolean: false
-	//	char: '\u0000'(NUL)
-	//	Objects: null
-	//
-	// Identifiers / Names for class, variables, methods: (Java is case-sensitive)
-	//	Start with letter, $ or _
-	//	After start including numbers
-	//	Not Java reserved words
 	int number;
 	String text;
 	boolean binary;
 	char character;
 
-	// Instance Initializer Block. Called everytime class gets instantiated
-	// Underscore allowed inside numbers. Only not at start/end or after/before decimal point.
-	{ number = 1_000; System.out.println("Instance Initializer"); }
+	// Instance Initializer Block
+	// Called everytime class gets instantiated
+	{ System.out.println("Instance Initializer"); }
 
-	// Static Field and Static Initializer. Called once when class is used the first time
-	// Float Postfix: f
-	// Long Postfix: L / l
-	static float decimal;
-	static { decimal = 1.0f; System.out.println("Static Initializer"); }
+	// Static Initializer Block
+	// Called once when class is used the first time
+	static { System.out.println("Static Initializer"); }
 
 	// Default Constructor. If not specified, automatically inserted from compiler
 	// Default Constructor != User-defined Constructor
@@ -59,16 +28,6 @@ public class Class {
 	// this() and super() has to be the first statement in constructors
 	public Class() {
 		System.out.println("Constructor");
-
-		// Local Variables have no default initialization
-		// Multiple Variables of same type separated by comma
-		int number, anotherNum;
-
-		// Octal, Hexa and Binary numbers
-		number = 072;
-		number = 0xA2;
-		number = 0b110;
-
 	}
 
 	// Overloading Constructors possible
@@ -77,9 +36,7 @@ public class Class {
 		this();
 	}
 
-	// Called at most once, when object is garbage collecting
-	// System.gc() - suggests garbage collection, but can be ignored
-	protected void finalize() {
-		System.out.println("Garbage collecting"); // Will not be called when program exists before GC
+	public static void init(){
+		new Class(); new Class(0);
 	}
 }
