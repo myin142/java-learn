@@ -1,5 +1,6 @@
 package root.util;
 
+// Often applied throughout an application
 public class DesignPrinciple{
 
     /* JavaBeans Naming Conventions for Encapsulation */

@@ -1,5 +1,6 @@
 package root.util;
 
+// Focused on solving specific commonly occurring problem
 public class DesignPattern{}
 
 // For Exam: Singletons are always unique
