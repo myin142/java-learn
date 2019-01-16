@@ -82,33 +82,12 @@ public class Streams{
 		//		XXXSummaryStatistics summaryStatistics()
 		//			-> getAverage() | getCount() | getMax() | getMin() | getSum()
 		//
-		// Exception: BooleanSupplier
-		// Functional Interface for Primitives: (Interface | Parameter | Return | Method)
-		//		XXXSupplier				0			xxx			getAsXXX
-		//		XXXConsumer				1(xxx)		void		accept
-		//		XXXPredicate			1(xxx)		boolean		test
-		//		XXXFunction<R>			1(xxx)		R			apply
-		//		XXXUnaryOperator		1(xxx)		xxx			applyAsXXX
-		//		XXXBinaryOperator		2(xxx,xxx)	xxx			applyAsXXX
-		//		ToXXXFunction<T>		1(T)		xxx			applyAsXXX
-		//		ToXXXBiFunction<T, U>	2(T, U)		xxx			applyAsXXX
-		//		XX1ToXX2Function		1(xx1)		xx2			applyAsXX2
-		//		ObjXXXConsumer<T>		2(T,xxx)	void		accept
 		double av = IntStream.iterate(1, i -> i + 1).limit(5)
 			.mapToDouble(i -> i * 0.5).summaryStatistics().getAverage();
 		System.out.println(av);
 
 		// Advanced Stream Concepts:
 		//		Linking Streams to Underlying data: Stream and Data are linked after creation
-		//
-		//		Chaining Optional: methods of optional instance
-		//			Optional<U> map(Function<? super T, ? extends U>)
-		//			Optional<U> flatMap(Function<? super T, Optional<U>>)
-		//			Optional<T> filter(Predicate<? super T>)
-		//
-		//		Functional Interfaces do not throw exceptions -> Cannot use methods that throw checked exceptions
-		//			E.g. When passing method reference -> compiler error
-		//			Solution: wrapper method to catch exception
 		//
 		// Collectors: (static methods)															Return from collect()
 		//		averagingXXX(ToXXXFunction)			calculate average for primitive types		Double

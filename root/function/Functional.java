@@ -13,6 +13,19 @@ import java.util.function.Consumer;
 //      BiFunction<T,U,R>   2(T,U)      R           apply
 //      UnaryOperator<T>    1(T)        T           apply
 //      BinaryOperator<T>   2(T,T)      T           apply 
+//
+// Exception: BooleanSupplier
+// Functional Interface for Primitives: (Interface | Parameter | Return | Method)
+//		XXXSupplier				0			xxx			getAsXXX
+//		XXXConsumer				1(xxx)		void		accept
+//		XXXPredicate			1(xxx)		boolean		test
+//		XXXFunction<R>			1(xxx)		R			apply
+//		XXXUnaryOperator		1(xxx)		xxx			applyAsXXX
+//		XXXBinaryOperator		2(xxx,xxx)	xxx			applyAsXXX
+//		ToXXXFunction<T>		1(T)		xxx			applyAsXXX
+//		ToXXXBiFunction<T, U>	2(T, U)		xxx			applyAsXXX
+//		XX1ToXX2Function		1(xx1)		xx2			applyAsXX2
+//		ObjXXXConsumer<T>		2(T,xxx)	void		accept
 
 // Functional Interface:
 //      Interface with one abstract method
@@ -21,6 +34,11 @@ import java.util.function.Consumer;
 //      @FunctionalInterface interface FunctionalInterface{
 //          void print(String s);
 //      }
+//
+// Functional Interfaces do not throw exceptions -> Cannot use methods that throw checked exceptions
+//		E.g. When passing method reference -> compiler error
+//		Solution: wrapper method to catch exception
+//
 
 public class Functional{
 
@@ -58,6 +76,12 @@ public class Functional{
         //      static Optional<T> empty()
         //      static Optional<T> of(T)
         //      static Optional<T> ofNullable(T) - return empty if null
+		//
+		// Chaining Optional: methods of optional instance
+		//		Optional<U> map(Function<? super T, ? extends U>)
+		//		Optional<U> flatMap(Function<? super T, Optional<U>>)
+		//		Optional<T> filter(Predicate<? super T>)
+		//
         //
         //      Method                              Optional is Empty                   Optional has value
         //
