@@ -45,7 +45,7 @@ public class DesignPrinciple{
     // Human has-a Pet
 
     // Object Composition: alternative to inheritance
-    //  Constructing class using refenrece to other class to access functionality
+    //  Constructing class using reference to other class to access functionality
     //
     // Human Class can call members of Pet Classes
 }
