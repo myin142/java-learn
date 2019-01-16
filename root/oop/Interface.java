@@ -17,7 +17,7 @@ package root.oop;
 // Everything assumed public, cannot be private and protected.
 //
 // Interfaces assumed abstract
-interface Interface {
+interface Interface extends A,B{
 
     // Interface variables assumed public, static and final
     String variable = "Variable";
@@ -39,3 +39,6 @@ interface Interface {
     // Solution: override methods
     default void defaultMethod(){}
 }
+
+interface A{}
+interface B{}
