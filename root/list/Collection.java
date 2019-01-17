@@ -20,7 +20,7 @@ public class Collection{
         // Common Collection Methods
         //      boolean isEmpty() | int size() | void clear()
         //      boolean add(E) | boolean remove(Object)
-        //      boolean.contains(Object)
+        //      boolean contains(Object)
         //      void forEach(Consumer)
         //      boolean removeIf(Predicate<? super E>)
         //      void replaceAll(UnaryOperator<E>)
@@ -116,7 +116,7 @@ public class Collection{
         //      void clear() | boolean isEmpty() | int size()
         //
         //      V get(Object)           return value mapped by key or null if none
-        //      V put(K, V)             add or replace key/value pair, return previous value of null if none
+        //      V put(K, V)             add or replace key/value pair, return previous value or null if none
         //      V remove(Object)        removes and return value mapped by key, null if none
         //
         //      boolean containsKey(Object) | boolean containsValue(Object)
