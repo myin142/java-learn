@@ -114,7 +114,7 @@ public class Concurrency extends RecursiveTask<String> implements Runnable{
 		//
 		// Future:
 		//		isDone()					true if completed, threw exception or cancelled
-		//		isCancelled()				true if cancelled before completely normally
+		//		isCancelled()				true if cancelled before completed normally
 		//		cancel()					attempts to cancel execution of task
 		//		V get()						get result of task, waiting endlessly if not yet available | throws InterruptedException, ExecutionException
 		//		V get(long, TimeUnit)		same as get(), with timeout -> TimeoutException
@@ -139,7 +139,7 @@ public class Concurrency extends RecursiveTask<String> implements Runnable{
 		// abstract class RecursiveTask<T> { protected abstract T compute(); }		/
 		//
 		// RecursiveAction -> invokeAll(ForkJoinTask...), never calls compute on his own and has no return
-		// RecursiveTask -> fork() -> return task.compute() + otherTask.join()
+		// RecursiveTask -> fork() -> return newTask.compute() + otherTask.join()
 		// ForkJoinPool -> invoke(ForkJoinTask)
 		//
 		// Fork/Join Issues:
