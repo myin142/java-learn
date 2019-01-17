@@ -1,6 +1,7 @@
 package root.function;
 
 import java.util.Optional;
+import java.util.function.BiPredicate;
 import java.util.function.Consumer;
 
 // Functional Interfaces: (Interface | Parameter | Return | Method)
@@ -71,6 +72,7 @@ public class Functional{
         //      constructor: generic is class type
         //          String::new | () -> new String()
         printText(System.out::println);
+		printText(String::startsWith);
 
         // Optional: might have value or might be empty
         //      static Optional<T> empty()
@@ -100,6 +102,9 @@ public class Functional{
 
     private static void printText(Consumer<String> i){
         i.accept("Method Reference");
+    }
+    private static void printText(BiPredicate<String, String> i){
+        System.out.println(i.test("Test", "T"));
     }
 
     private static Optional<Double> average(int... nums){
