@@ -77,7 +77,7 @@ interface GenericInterface<X>{
     void method(X t);
 }
 
-// First way, compiler warning -> should be using generics
+// Third way, compiler warning -> should be using generics
 // For exam, have to known when warnings occur
 class Test01 extends Super implements GenericInterface {
     public void method(Object t){}
@@ -86,7 +86,7 @@ class Test01 extends Super implements GenericInterface {
 class Test02<T> implements GenericInterface<T>{
     public void method(T t){}
 }
-// Third way
+// First way
 class Test03 implements GenericInterface<Test01>{
     public void method(Test01 t){}
 }
