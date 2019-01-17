@@ -22,7 +22,17 @@ import java.util.stream.Stream;
 //      Source: Where stream comes from
 //      Intermediate Operations: transform stream into another, lazy evaluation -> runs when terminal operation runs
 //      Terminal Operation: Produces a result, after operation -> stream no longer valid
+//
+// XXX = Double, Long, Int | xxx = double, long, int
 public class Streams{
+
+	// Mapping to other Stream:
+	// 					To Stream					To DoubleStream						To IntStream					To LongStream
+	// Stream			map(Function)				mapToDouble(ToDoubleFunction)		mapToInt(ToIntFunction)			mapToLong(ToLongFunction)
+	// DoubleStream		mapToObj(DoubleFunction)	map(DoubleUnaryOperator)			mapToInt(DoubleToIntFunction)	mapToLong(DoubleToLongFunction)
+	// IntStream		mapToObj(IntFunction)		mapToDouble(IntToDoubleFunction)	map(IntUnaryOperator)			mapToLong(IntToLongFunction)
+	// LongStream		mapToObj(LongFunction)		mapToDouble(LongToDoubleFunction)	mapToInt(LongToIntFunction)		map(LongUnaryOperator)
+	//
     
     public static void init(){
         List<String> list = new ArrayList<>();
@@ -30,6 +40,11 @@ public class Streams{
         // Creating Streams:
         //      Stream.empty() | Stream.of(T...) | list.stream()
         //      Stream.generate(Supplier<T>) | Stream.iterate(T, UnaryOperator<T>)
+		//
+		// Primitive Streams: IntStream | LongStream | DoubleStream
+		//		Creation same as normal Stream
+		//		+ range(int, int endExcluded) | rangeClosed(int, int endIncluded) -> only Int and Long
+		//
         Stream<String> s1 = Stream.empty();
         Stream<Integer> s2 = Stream.of(1, 2);
         Stream<String> fromList = list.stream();
@@ -54,27 +69,8 @@ public class Streams{
 		//
 		TreeSet<String> word = Stream.of("w o l f".split(" ")).collect(TreeSet::new, TreeSet::add, TreeSet::addAll);
 		System.out.println(word);
-
-		// Common Intermediate Operations: (All return Streams, always <? super T>)
-		//		filter(Predicate) | distinct() | limit(int) | skip(int) | sorted() | sorted(Comparator)
-		//		peek(Consumer) - useful for debugging, should not change values
 		//
-		//		map(Function<? super T, ? extends R> mapper) - one-to-one mapping
-		//		flatMap(Function<? super T, ? extends Stream<? extends R>> mapper) - flatten stream to one level
-		Stream.of("w o l f".split(" ")).map(String::length).forEach(System.out::print);
-
-		// Primitive Streams: IntStream | LongStream | DoubleStream
-		//		Creation same as normal Stream
-		//		+ range(int, int endExcluded) | rangeClosed(int, int endIncluded) -> only Int and Long
-		//
-		// Mapping to other Stream:
-		// 					To Stream					To DoubleStream						To IntStream					To LongStream
-		// Stream			map(Function)				mapToDouble(ToDoubleFunction)		mapToInt(ToIntFunction)			mapToLong(ToLongFunction)
-		// DoubleStream		mapToObj(DoubleFunction)	map(DoubleUnaryOperator)			mapToInt(DoubleToIntFunction)	mapToLong(DoubleToLongFunction)
-		// IntStream		mapToObj(IntFunction)		mapToDouble(IntToDoubleFunction)	map(IntUnaryOperator)			mapToLong(IntToLongFunction)
-		// LongStream		mapToObj(LongFunction)		mapToDouble(LongToDoubleFunction)	mapToInt(LongToIntFunction)		map(LongUnaryOperator)
-		//
-		// Primitive Stream Methods: XXX = Double, Long, Int | xxx = double, long, int
+		// Primitive Stream Methods: 
 		//		OptionalXXX max/min() | OptionalXXX findAny/findFirst()
 		//		OptionalDouble average() | xxx sum()
 		//
@@ -84,6 +80,15 @@ public class Streams{
 		double av = IntStream.iterate(1, i -> i + 1).limit(5)
 			.mapToDouble(i -> i * 0.5).summaryStatistics().getAverage();
 		System.out.println(av);
+
+
+		// Common Intermediate Operations: (All return Streams, always <? super T>)
+		//		filter(Predicate) | distinct() | limit(int) | skip(int) | sorted() | sorted(Comparator)
+		//		peek(Consumer) - useful for debugging, should not change values
+		//
+		//		map(Function<? super T, ? extends R> mapper) - one-to-one mapping
+		//		flatMap(Function<? super T, ? extends Stream<? extends R>> mapper) - flatten stream to one level
+		Stream.of("w o l f".split(" ")).map(String::length).forEach(System.out::print);
 
 		// Advanced Stream Concepts:
 		//		Linking Streams to Underlying data: Stream and Data are linked after creation
