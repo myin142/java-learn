@@ -28,7 +28,7 @@ public class ConcurCollection{
 		//		ConcurrentLinkedDeque		Deque									Yes			No			No
 		//		ConcurrentLinkedQueue		Queue									Yes			No			No
 		//		ConcurrentSkipListMap		ConcurrentMap,SortedMap,NavigableMap	Yes			Yes			No
-		//		ConcurrentSkipListSet		SortedSet,NavigableMap					Yes			Yes			No
+		//		ConcurrentSkipListSet		SortedSet,NavigableSet					Yes			Yes			No
 		//		CopyOnWriteArrayList		List									Yes			No			No
 		//		CopyOnWriteArraySet			Set										No			No			No
 		//		LinkedBlockingDeque			BlockingDeque, BlockingQueue			Yes			No			Yes
