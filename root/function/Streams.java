@@ -44,7 +44,7 @@ public class Streams{
 		//		boolean allMatch/anyMatch/noneMatch(Predicate) | void forEach(Consumer)
 		//
 		//		T reduce(T identity, BinaryOperator<T> accumulator)
-		//		Optiona<T> reduce(BinaryOperator<T> accumulator)
+		//		Optional<T> reduce(BinaryOperator<T> accumulator)
 		//		<U> U reduce(U identity, BiFunction<U, ? super T, U> accumulator, BinarOperator<U> combiner) - for parallel processing
 		String reduced = Stream.of("w o l f".split(" ")).reduce("", String::concat, String::concat);
 		System.out.println(reduced);
