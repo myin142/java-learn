@@ -52,7 +52,6 @@ public class Streams{
 		//		<R> R collect(Supplier<R>, BiConsumer<R, ? super T> accumulator, BiConsumer<R, R> combiner) - for parallel processing
 		//		<R,A> R collect(Collector<? super T, A, R> collector)
 		//
-		//		Collectors.toCollection(Supplier) | Collectors.toSet()
 		TreeSet<String> word = Stream.of("w o l f".split(" ")).collect(TreeSet::new, TreeSet::add, TreeSet::addAll);
 		System.out.println(word);
 
