@@ -1,11 +1,5 @@
 package root.list;
 
-import java.util.List;
-import java.util.function.Predicate;
-import java.util.stream.Stream;
-import java.util.ArrayList;
-import java.util.Arrays;
-
 // Declare formal type parameter in angle brackets: <T>
 // Any data type can be passed as T
 //
