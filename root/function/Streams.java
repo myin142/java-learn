@@ -76,11 +76,11 @@ public class Streams{
 		// LongStream		mapToObj(LongFunction)		mapToDouble(LongToDoubleFunction)	mapToInt(LongToIntFunction)		map(LongUnaryOperator)
 		//
 		// Primitive Stream Methods: XXX = Double, Long, Int | xxx = double, long, int
-		//		OptionalXXX max() | OptionalXXX min() | OptionalDouble average() | xxx sum()
-		//		orElseGet(XXXSupplier) | optional.getAsXXX
+		//		OptionalXXX max/min() | OptionalXXX findAny/findFirst()
+		//		OptionalDouble average() | xxx sum()
 		//
 		//		XXXSummaryStatistics summaryStatistics()
-		//			-> getAverage() | getCount() | getMax() | getMin() | getSum()
+		//			-> double getAverage() | long getCount() | xxx getMax() | xxx getMin() | long/double getSum()
 		//
 		double av = IntStream.iterate(1, i -> i + 1).limit(5)
 			.mapToDouble(i -> i * 0.5).summaryStatistics().getAverage();
