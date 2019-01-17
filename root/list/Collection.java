@@ -93,7 +93,10 @@ public class Collection{
         //      boolean offer(E) | E peek() | E poll();
 
         // Common ArrayDeque Methods
-        //      void push(E) | E pop()
+        //      void push(E) | E pop() - throws exception when Empty
+		//		pop() and poll() return same values
+		//		push() + pop/poll() = stack
+		//		offer() + pop/poll() = queue
         //
         // LinkedList like ArrayDeque
 
