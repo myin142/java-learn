@@ -26,6 +26,6 @@ public class Object{
     //  Within same program, always return same value
     //  equals() == false => both hashCode does not have to return same value
     //  equals() == true => both hashCode() must return same value
-    //  -> inside hashCode() the same variables or a subset of it has to be used
+    //  -> inside hashCode() the same variables or a subset of it (from equals()) has to be used
     public int hashCode(){ return super.hashCode(); }
 }
