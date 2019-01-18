@@ -87,7 +87,7 @@ public class NIO2{
         //      All throws IOException:
         //          Stream<Path> Files.walk(Path)
         //          Stream<Path> Files.walk(Path, int)                   specifiy search depth
-        //          Stream<Path> Files.find(Path, int, BiPredicate)
+        //          Stream<Path> Files.find(Path, int, BiPredicate<Path, BasicFileAttributes)
         //          Stream<Path> Files.list(Path)                        only one depth list
         //          Stream<String> Files.lines(Path)
         try{
