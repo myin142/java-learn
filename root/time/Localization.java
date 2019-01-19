@@ -53,7 +53,7 @@ public class Localization{
         bundle.keySet().stream().forEach(s -> prop.put(s, bundle.getObject(s)));
         prop.entrySet().stream().forEach(System.out::println);
         System.out.println(prop.getProperty("key1", "default")); // Properties support default values, or null if none specified
-        System.out.println(prop.get("key1")); // Do default value, if not found return null
+        System.out.println(prop.get("key1")); // No default value, if not found return null
 
         // Formatting: java.text.NumberFormat (all methods static and Locale parameter is optional)
         //      getInstance() | getNumberInstance() | getCurrencyInstance() | getPercentInstance()
