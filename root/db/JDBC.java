@@ -60,7 +60,7 @@ public class JDBC{
             //
             // ResultSet Concurrency: (downgrade if not available)
             //      ResultSet.CONCUR_READ_ONLY (default)
-            //      ResultSet.CONCUR_UPDATABLE
+            //      ResultSet.CONCUR_UPDATABLE - least likely to be supported
             Statement stmt = conn.createStatement();
 
             // Execute Statement: (wrong sql statement in method -> SQLException)
