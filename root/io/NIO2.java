@@ -67,14 +67,15 @@ public class NIO2{
         //
         // Views: group of related attributes for file system
         //      Files.readAttributes(Path, Class<A>) throws IOException - return read-only view of attributes
-        //      Files.getFileAttributeView(Path, Class<V>) throws IOException - view that can be modified
+        //      Files.getFileAttributeView(Path, Class<V>) - view that can be modified
         //
         //      BasicFileAttributes
         //          isDirectory() | isRegularFile() | isSymbolicLink() | size() | lastModifiedTime()
         //          isOther() | creationTime() | lastAccessTime() | fileKey() - unique id if supported
         //
         //      BasicFileAttributeView
-        //          readAttributes() | setTimes(FileTime lastMod, FileTime lastAccess, FileTime create) - no changes -> pass null
+        //          readAttributes() throws IOException
+		//			setTimes(FileTime lastMod, FileTime lastAccess, FileTime create) - no changes -> pass null
         Files.exists(path);
 
         // Stream Methods:
