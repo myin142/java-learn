@@ -12,8 +12,6 @@ public class AdvancedClass extends Abstract implements Interface{
     // Treated like array
     // Only allowed at the end of method parameters -> only one per method
 
-    /* Java is pass-by-value */
-
     // Hidden: Inside child/parent their own members are used
     //
     // Variables hidden

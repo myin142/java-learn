@@ -32,6 +32,10 @@ public class General{
     /*	Multi line comment */
     /** Java Doc */
 
+    // Java is:
+	//		pass-by-value
+	//		case-sensitive 
+
     // Benefits of Java
     //		Object Oriented
     //		Encapsulation
@@ -47,7 +51,7 @@ public class General{
 	//	    char: '\u0000'(NUL)
 	//	    Objects: null
 	//
-	// Identifiers / Names for class, variables, methods: (Java is case-sensitive)
+	// Identifiers / Names for class, variables, methods:
 	//	    Start with letter, $ or _
 	//	    After start including numbers
 	//	    Not Java reserved words
