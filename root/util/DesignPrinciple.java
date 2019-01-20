@@ -28,7 +28,7 @@ public class DesignPrinciple{
 
     /* Relationships */
 
-    // Is-a Relationship - inheritance test
+    // Is-a Relationship - inheritance (+ interface) test
     // A is a B
     //  Any instance of A can be treated like B
     //  -> True for subclass with any parent (direct or distant)
