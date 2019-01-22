@@ -44,7 +44,7 @@ public class Localization{
         // When located a bundle -> will only be dropping parts of name to search for keys
         ResourceBundle bundle = ResourceBundle.getBundle("root.time.Bundle", Locale.US);
         
-        // Get Key Value - only getString possible for property file
+        // Get Key Value
         System.out.println(bundle.getString("key1"));
         System.out.println(bundle.getObject("key2"));
 
