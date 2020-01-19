@@ -1,5 +1,7 @@
-# Java Language Summary
+## Java Learn
 
-Mainly for OCA and OCP Exam. Source: OCA and OCP Books from Jeanne Boyarsky and Scott Selikoff.
+Contains information and code useful for programming (mainly in Java).
 
-Also useful to remember all features of Java.
+ - Java 8: new features of java 8 (OCA, OCP)
+ - Java 11: new features of java 11 (WIP)
+ - Design Patterns: reference for common design patterns (WIP)
