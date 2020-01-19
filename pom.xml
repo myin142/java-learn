@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.java.learn</groupId>
+    <artifactId>java-learn</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <modules>
+        <module>java8</module>
+        <module>java11</module>
+        <module>design-patterns</module>
+    </modules>
+
+    <properties>
+        <!-- Default Java Version for projects -->
+        <maven.source.version>11</maven.source.version>
+        <maven.target.version>${maven.source.version}</maven.target.version>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>${maven.source.version}</source>
+                    <target>${maven.target.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
