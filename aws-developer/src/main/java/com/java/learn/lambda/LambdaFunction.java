@@ -1,4 +1,4 @@
-package com.example.lambda;
+package com.java.learn.lambda;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

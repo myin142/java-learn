@@ -1,6 +1,6 @@
-package com.example.lambda;
+package com.java.learn.lambda;
 
-import com.example.AwsCredentialsLoader;
+import com.java.learn.AwsCredentialsLoader;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

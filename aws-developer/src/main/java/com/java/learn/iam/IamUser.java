@@ -1,4 +1,4 @@
-package com.example.iam;
+package com.java.learn.iam;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

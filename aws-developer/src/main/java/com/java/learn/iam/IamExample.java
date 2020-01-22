@@ -1,6 +1,6 @@
-package com.example.iam;
+package com.java.learn.iam;
 
-import com.example.AwsCredentialsLoader;
+import com.java.learn.AwsCredentialsLoader;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
