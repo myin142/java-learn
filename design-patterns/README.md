@@ -15,6 +15,50 @@ References and samples for common design patterns.
 |                                       |                           |[Strategy](#strategy)                                  |
 |                                       |                           |[Template Method](#template-method)                    |
 |                                       |                           |[Visitor](#visitor)                                    |
+
+##### Common Cause for Redesign
+ - Creating an object by specifying a class explicitly
+    - [Abstract Factory](#abstract-factory)
+    - [Factory Method](#factory-method)
+    - [Prototype](#prototype)
+ - Dependence on specific operations
+    - [Chain of Responsibility](#chain-of-responsibility)
+    - [Command](#command)
+ - Dependence on hardware and software platform
+    - [Abstract Factory](#abstract-factory)
+    - [Bridge](#bridge)
+ - Dependence on object representation or implementation
+    - [Abstract Factory](#abstract-factory)
+    - [Bridge](#bridge)
+    - [Memento](#memento)
+    - [Proxy](#proxy)
+ - Algorithmic Dependencies
+    - [Builder](#builder)
+    - [Iterator](#iterator)
+    - [Strategy](#strategy)
+    - [Template Method](#template-method)
+    - [Visitor](#visitor)
+ - Tight Coupling
+    - [Abstract Factory](#abstract-factory)
+    - [Bridge](#bridge)
+    - [Chain of Responsibility](#chain-of-responsibility)
+    - [Command](#command)
+    - [Facade](#facade)
+    - [Mediator](#mediator)
+    - [Observer](#observer)
+ - Extending functionality by subclassing
+    - [Bridge](#bridge)
+    - [Chain of Responsibility](#chain-of-responsibility)
+    - [Composite](#composite)
+    - [Decorator](#decorator)
+    - [Observer](#observer)
+    - [Strategy](#strategy)
+ - Inability to alter classes conveniently
+    - [Adapter](#adapter)
+    - [Decorator](#decorator)
+    - [Visitor](#visitor)
+ 
+ 
  
 #### Abstract Factory
 #### Adapter
