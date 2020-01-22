@@ -5,16 +5,17 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 import software.amazon.awssdk.auth.credentials.*;
+import software.amazon.awssdk.core.exception.SdkClientException;
 
 @Component
 @Slf4j
 @PropertySource("application-aws.properties")
 public class AwsCredentialsLoader {
 
-    @Value("accessKey")
+    @Value("${accessKey}")
     private String accessKey;
 
-    @Value("secretAccessKey")
+    @Value("${secretAccessKey}")
     private String secretAccessKey;
 
     /**
@@ -41,8 +42,11 @@ public class AwsCredentialsLoader {
      */
 
     public AwsCredentials getCredentials() {
-        var credentials = DefaultCredentialsProvider.create().resolveCredentials();
-        if(credentials == null) {
+        AwsCredentials credentials;
+
+        try {
+            credentials = DefaultCredentialsProvider.create().resolveCredentials();
+        } catch (SdkClientException ex) {
             log.info("Using credentials from properties file");
             credentials = AwsBasicCredentials.create(accessKey, secretAccessKey);
         }
