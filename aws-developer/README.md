@@ -33,6 +33,7 @@
     - [Single Queue Service](#single-queue-service-sqs)
     - [Simple Notification Service](#simple-notification-service-sns)
     - [Simple Email Service](#simple-email-service-ses)
+    - [Kinesis](#kinesis)
     - [Containers](#containers)
  - [Refactoring (10%)](#refactoring)
     - [Optimize Applications](#optimize-applications)
@@ -480,6 +481,27 @@
     - Automated Emails
     - Purchase Confirmation, Shipping Notification, Order Status Updates
     - Marketing Communication, Advertisements, Newsletters, Special Offers
+    
+##### Kinesis
+ - Streaming Data for easy loading and analyzing
+ - Use Cases
+    - Online Purchases
+    - Stock Prices
+    - Game Data
+ - Kinesis Streams
+    - Store data in shard, 24h - 7 days
+    - Consists of shards
+    - 5 tx/s for read, up to total 2 MB/s
+    - Data capacity: number of shards
+    - Total capacity: sum of shard capacity
+ - Kinesis Firehose
+    - automated, no shards
+    - directly stored in S3 or S3 -> Redshift
+    - optional analysis -> Kinesis Analytics
+ - Kinesis Analytics
+    - analyze streaming data,
+    - gain actionable insights
+    - respond to your business and customer needs in real time
     
 ##### Containers
  - Fargate: provision and manage servers for ECS and EKS automatically
