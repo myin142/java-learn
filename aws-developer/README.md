@@ -419,6 +419,7 @@
     - Dev. and Management Tools: CloudFormation, CloudTrail, CodeCommit, CloudWatch
     - Event/Message: SES, SNS, SQS, Cron Events
  - Version Control
+ - Layers: share code (Frameworks, SDKs, Libraries, ...) across multiple functions
     
 ##### API Gateway
  - API Service for REST, SOAP, Websocket
