@@ -4,6 +4,13 @@
  - [Exam Guide](https://d1.awsstatic.com/training-and-certification/docs-dev-associate/AWS_Certified_Developer_Associate-Exam_Guide_EN_1.4.pdf)
  - [Certification Preparation](https://aws.amazon.com/certification/certification-prep/)
  - [Assessment Test in Study Guide](https://www.amazon.com/Certified-Developer-Official-Study-Guide/dp/1119508193)
+ - [Amazon Resource Names](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html)
+    - Structure: `arn:<partition>:<service>:<region>:<account-id>:(<resourceType>/)<resource>`
+        - Partition is usually `aws`. For some region, such as China, this can be different
+        - Some values can be omitted if not limited (by region or account)
+    - `arn:aws:polly:us-west-2:123456789012:lexicon/awsLexicon`
+    - `arn:aws:iam::123456789012:user/carla`
+    - `arn:aws:s3:::bucket-name/exampleobject.png`
  
 #### Table of Contents
  - [Deployment (22%)](#deployment)
@@ -141,12 +148,12 @@
  - User: represents person or service
     - When creating own user instead of using root
     - When other people need access, but no other identity mechanism
-    - When want to use CLI
+    - When want to use CLI, local development
  - Group: collection of IAM users
  - Role: set of permissions for users, applications or services
     - When application on EC2 needs access
     - When creating mobile apps
-    - When company users want access AWS without sign in again
+    - When company users want access AWS without sign in again (Active Directory)
  - Policy: defines authorization
     - Managed Policies: managed by AWS
     - Customer Managed Policies: standalone policy, managed by ourselves
@@ -174,6 +181,7 @@
  - Customer managed keys
  - Customer Master key
  - KMS Envelope Encryption: KMS Master Key encrypts envelope key
+ - Region specific
 
 ##### CloudHSM (Hardware Security Modules)
  - Generate and use own encryption keys
@@ -209,6 +217,8 @@
  - RDS
     - Encryption using AWS KMS for instance, backups and snapshots
     - Encryption on existing DB instances not supported
+        - Possible with snapshot and restore as encrypted instance
+    - Encryption on an instance cannot be disabled
  - AWS Encryption SDK
     - Client side encryption library
     - Encrypt and decrypt data using industry standards and best practices
@@ -336,6 +346,7 @@
     - Automated Backups: Full daily snapshot, retention 1-35 days
     - Database Snapshots: Manually, stored even after RDS deletion
     - Restored as new RDS instance
+    - Can be copied to other regions
  - [Encryption](#encryption)
  - Multi-AZ: Synchronous
     - Exact copy in another AZ
@@ -439,6 +450,7 @@
     - Track and control usage by API key
     - Maintain multiple version of API
     - Deploy to different stages (prod, dev)
+        - Stage variables: name-value pairs, like env variables for stages
     - API Caching: cache response for specific TTL period
     - API Import
         - From external file (Swagger v2.0)
@@ -451,6 +463,7 @@
     - WebSocket API
     - Authorization
         - IAM policies
+        - Resource policies
         - Lambda custom authorizers
         - Amazon Cognito user pools
         
@@ -587,6 +600,13 @@
     - Monitor Logs in near real-time for phrases, values or patterns
     - Stored indefinitely
     - Can change retention for each Log Group
+ - CloudWatch Agent
+    - Collect system-level metrics from EC2 or on-premise
+    - Collect logs from EC2 or on-premise
+    - Store and view metrics in CloudWatch
+ - CloudWatch Container Insights
+    - Collect, aggregate and summarize metrics and logs from containerized applications and microservices
+    - For ECS, EKS and Kubernetes on EC2
  - Does not aggregate data across region
 
 ##### CloudTrail
@@ -628,6 +648,7 @@
  - AWS Storage Gateway: Hybrid cloud storage with local caching, on-premise access
  - AWS OpsWorks: Automate Operations with Chef and Puppet. Use code to automate the configurations of your servers
  - AWS Cost Explorer: Visualize, understand, and manage your AWS costs and usage over time
+ - AWS Systems Manager: Gain operational insights and take action on AWS resources
  - Amazon Redshift: Data warehouse to analyze data using SQL or Business Intelligence (BI), **Leader Node** receive SQL queries
  - Amazon Neptune: Fast, reliable graph database built for the cloud
  - Amazon WorkDocs: Secure content collaboration, Simple Active Directory can be used for authentication
