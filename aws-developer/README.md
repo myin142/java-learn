@@ -55,7 +55,7 @@
  - Scaling out is better than scaling up
  - AWS Elastic Beanstalk allows you to focus on building your application
  - CloudFormation templates allow you to have a definition of resources to create
- - A serverless application is typically a combination of Lamba + other AWS services
+ - A serverless application is typically a combination of Lambda + other AWS services
 
 ##### Elastic Beanstalk
  - For deploying and scaling web applications
@@ -600,7 +600,5 @@
      - Network performance
      - Utilization for cost efficiency
      - Unused or underused instances running
-
-
 
 
