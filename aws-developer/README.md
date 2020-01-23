@@ -240,7 +240,7 @@
     - When flexible start and end times
     - When urgent need for large amount of capacity
  - Dedicated Hosts: physical servers
-    - Can be purchased on-demond or as reservation
+    - Can be purchased on-demand or as reservation
     - When using server-bound licenses
 
 |Family | Speciality                                | Use Case                                  
