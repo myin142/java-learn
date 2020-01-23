@@ -255,21 +255,26 @@
 
 |Family | Speciality                                | Use Case                                  
 |-------|-------------------------------------------|---
+| |**General purpose**|
 | T2    | Lowest Cost, General Purpose              | Web Servers, Small Databases
 | A1    | General Purpose, ARM-based workloads      | Scale-out workloads (Web Servers, Containerized Microservices)
 | M5    | General Purpose                           | Application Servers
 |-------|-------------------------------------------|---------------------------------------
+| |**Accelerated computing**|
 | P3    | Graphics / General Purpose GPU            | Machine Learning, Bitcoin Mining
 | G3    | Graphics Intensive                        | Video Encoding, 3D Application Streaming
 | F1    | Field Programmable Gate Array             | Research, Big Data, Analytics, Real-Time Video Processing
 |-------|-------------------------------------------|---------------------------------------
+| |**Storage optimized**|
 | H1    | High Disk Throughput                      | MapReduce-based Workloads, Distributed File Systems (HDFs/MapR-FS)
 | I3    | High Speed Storage                        | NoSQL Databases, Data Warehousing
 | D2    | Dense Storage                             | File Servers, Data Warehousing, Hadoop
 |-------|-------------------------------------------|---------------------------------------
+| |**Memory optimized**|
 | R4    | Memory Optimized                          | Memory Intensive Apps / Databases
 | X1    | Memory Optimized                          | SAP HANA, Apache Spark
 |-------|-------------------------------------------|---------------------------------------
+| |**Compute optimized**|
 | C5    | Compute Optimized                         | CPU Intensive Apps / Databases
 
 ##### Elastic Block Storage (EBS)
