@@ -3,6 +3,7 @@
  - [Information](https://aws.amazon.com/certification/certified-developer-associate/)
  - [Exam Guide](https://d1.awsstatic.com/training-and-certification/docs-dev-associate/AWS_Certified_Developer_Associate-Exam_Guide_EN_1.4.pdf)
  - [Certification Preparation](https://aws.amazon.com/certification/certification-prep/)
+ - [Assessment Test in Study Guide](https://www.amazon.com/Certified-Developer-Official-Study-Guide/dp/1119508193)
  
 #### Table of Contents
  - [Deployment (22%)](#deployment)
@@ -43,6 +44,7 @@
     - [CloudTrail](#cloudtrail)
     - [X-Ray](#x-ray)
     - [Tips](#tips)
+ - [Other Services](#other-services)
 
 #### Deployment
  - Deploy written code in AWS using CI/CD pipelines, processes and patterns
@@ -107,6 +109,7 @@
     
 ##### Code
  - CodeCommit - source control service
+    - Code cannot be synced from S3
  - CodeBuild - build service
     - Configure using `buildspec.yml`
  - CodeDeploy - deployment service
@@ -206,6 +209,10 @@
  - RDS
     - Encryption using AWS KMS for instance, backups and snapshots
     - Encryption on existing DB instances not supported
+ - AWS Encryption SDK
+    - Client side encryption library
+    - Encrypt and decrypt data using industry standards and best practices
+    - Supports: Management of keys, encryption/decryption, storage of encrypted data
 
 #### Development with AWS Services
  - Write code for serverless applications
@@ -241,15 +248,19 @@
 | T2    | Lowest Cost, General Purpose              | Web Servers, Small Databases
 | A1    | General Purpose, ARM-based workloads      | Scale-out workloads (Web Servers, Containerized Microservices)
 | M5    | General Purpose                           | Application Servers
+|-------|-------------------------------------------|---------------------------------------
 | P3    | Graphics / General Purpose GPU            | Machine Learning, Bitcoin Mining
 | G3    | Graphics Intensive                        | Video Encoding, 3D Application Streaming
+| F1    | Field Programmable Gate Array             | Research, Big Data, Analytics, Real-Time Video Processing
+|-------|-------------------------------------------|---------------------------------------
 | H1    | High Disk Throughput                      | MapReduce-based Workloads, Distributed File Systems (HDFs/MapR-FS)
 | I3    | High Speed Storage                        | NoSQL Databases, Data Warehousing
 | D2    | Dense Storage                             | File Servers, Data Warehousing, Hadoop
+|-------|-------------------------------------------|---------------------------------------
 | R4    | Memory Optimized                          | Memory Intensive Apps / Databases
 | X1    | Memory Optimized                          | SAP HANA, Apache Spark
+|-------|-------------------------------------------|---------------------------------------
 | C5    | Compute Optimized                         | CPU Intensive Apps / Databases
-| F1    | Field Programmable Gate Array             | Research, Big Data, Analytics, Real-Time Video Processing
 
 ##### Elastic Block Storage (EBS)
  - General Purpose SSD (GP2) - balance price and performance
@@ -408,6 +419,7 @@
      - Conditional write operations
      - Optimistic locking with version number
      - Batch Operations: BatchGetItem, BatchWriteItem
+     - DynamoDB Local: install locally for testing and development
      
 ##### Lambda
  - Serverless compute service
@@ -426,7 +438,7 @@
  - Features
     - Track and control usage by API key
     - Maintain multiple version of API
-    - Deploy to different stages
+    - Deploy to different stages (prod, dev)
     - API Caching: cache response for specific TTL period
     - API Import
         - From external file (Swagger v2.0)
@@ -436,6 +448,11 @@
         - default: steady-stage request to 10.000 requests/s
         - Max concurrent: 5000 across all APIs
         - 429 error if too many requests
+    - WebSocket API
+    - Authorization
+        - IAM policies
+        - Lambda custom authorizers
+        - Amazon Cognito user pools
         
 ##### Step Functions
  - Visualize and test serverless applications
@@ -570,6 +587,7 @@
     - Monitor Logs in near real-time for phrases, values or patterns
     - Stored indefinitely
     - Can change retention for each Log Group
+ - Does not aggregate data across region
 
 ##### CloudTrail
  - Monitor API calls and tracks user activity
@@ -601,4 +619,15 @@
      - Utilization for cost efficiency
      - Unused or underused instances running
 
-
+#### Other Services
+ - AWS Secrets Manager: Rotate, manage, and retrieve database credentials, API keys, and other secrets
+ - AWS AppSync: Create flexible API from one or more data sources using GraphQL, supports real-time updates
+ - AWS Polly: Turn text into lifelike speech using deep learning 
+ - AWS Snowball: Physically migrate petabyte-scale data sets into and out of AWS
+ - AWS Snowmobile: Migrate or transport exabyte-scale data sets into and out of AWS 
+ - AWS Storage Gateway: Hybrid cloud storage with local caching, on-premise access
+ - AWS OpsWorks: Automate Operations with Chef and Puppet. Use code to automate the configurations of your servers
+ - AWS Cost Explorer: Visualize, understand, and manage your AWS costs and usage over time
+ - Amazon Redshift: Data warehouse to analyze data using SQL or Business Intelligence (BI), **Leader Node** receive SQL queries
+ - Amazon Neptune: Fast, reliable graph database built for the cloud
+ - Amazon WorkDocs: Secure content collaboration, Simple Active Directory can be used for authentication
