@@ -355,6 +355,7 @@
  
 ##### Relational Database Service (RDS)
  - Types: SQL Server, Oracle, MySQL, PostgreSQL, Amazon Aurora, MariaDB
+ - Instances can be reserved
  - Types of Queries
     - Online Transaction Processing (OLTP): simple queries, RDS, e.g one transaction
     - Online Analytics Processing (OLAP): complex queries, Redshift, e.g net profit
@@ -373,6 +374,13 @@
     - Must have automatic backups
     - Can also be in multi-AZ
     - Can be promoted to be own DB
+ - Features
+    - Enhanced Monitoring: deeper visibility into health of RDS instance
+        - View metrics up to 1 hour back and granularity of up to 1 second
+    - Performance Insights: analyze and tune RDS performance
+        - Deeper level than Enhanced Monitoring and longer data retention period
+    - VPC: DB can be moved inside VPC
+        - Once inside cannot be moved outside
 
 ##### ElastiCache
  - Storing critical pieces of data for low-latency
