@@ -320,10 +320,13 @@
         - Infrequent access in single AZ
     - Reduced Redundancy Storage
         - For data that can be recreated
-    - Glacier
+    - S3 Glacier
         - For archival only
         - Infrequent access
         - Takes 3-5 hours to restore
+    - S3 Glacier Deep Archive
+        - For objects accessed once or twice a year
+        - Standard retrieval within 12 hours or Bulk retrieval of large amounts within 48 hours
     - S3 - Intelligent
         - For unknown or unpredictable access pattern
         - Automatically moves to cost-effective tier
@@ -336,6 +339,14 @@
     - [Encryption](#encryption)
     - Versioning
     - Replication
+    - Batch Operations: run job to execute operations on multiple objects
+    - Access Analyzer: monitor access policies
+    - S3 Access Points: simplifies managing data access at scale
+    - S3 Select: retrieve smaller, targeted data set from object using simple SQL
+  - Performance
+    - S3 uses key name to determine which partition to store
+    - Use random prefix to key names to improve IO performance -> stored in different partitions
+    - Do not use sequential key names -> stored in same partitions
     
 ##### Cloud Front
  - Content Delivery Network (CDN)
