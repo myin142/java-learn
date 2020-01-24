@@ -518,6 +518,10 @@
  - **VisibilityTimeout**: invisible for others until processed, max 12h (default 30s)
  - Long Polling: wait until message available or timeout (max 20s)
  - Short Polling: return immediately if empty
+ - In most cases use Long Polling over Short Polling
+    - To receive message as soon as available
+    - To reduce number of empty ReceiveMessageResponse
+    - Higher performance at reduced cost in majority of use cases
  - Standard Queues
     - nearly unlimited tx/s
     - at least once
@@ -688,3 +692,4 @@
  - Amazon Redshift: Data warehouse to analyze data using SQL or Business Intelligence (BI), **Leader Node** receive SQL queries
  - Amazon Neptune: Fast, reliable graph database built for the cloud
  - Amazon WorkDocs: Secure content collaboration, Simple Active Directory can be used for authentication
+ - Amazon MQ: Managed message broker service for Apache ActiveMQ, to move existing application to cloud quickly and easily
