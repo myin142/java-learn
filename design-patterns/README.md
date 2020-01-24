@@ -74,6 +74,11 @@ Consequences
  - It makes exchanging product families easy
  - It promotes consistency among products
  - Supporting new kinds of products is difficult
+ 
+Implementation Tips
+ - Factories as singletons
+ - Creating the products by each concrete factory
+ - Defining extensible factories by changing product creation with method parameter
 
 #### Adapter
 #### Bridge
