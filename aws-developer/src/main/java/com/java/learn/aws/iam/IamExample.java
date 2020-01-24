@@ -1,41 +1,40 @@
-package com.java.learn.lambda;
+package com.java.learn.aws.iam;
 
-import com.java.learn.AwsCredentialsLoader;
+import com.java.learn.aws.AwsCredentialsLoader;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import software.amazon.awssdk.regions.Region;
-import software.amazon.awssdk.services.lambda.LambdaClient;
+import software.amazon.awssdk.services.iam.IamClient;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("lambda")
-public class LambdaExample {
+@RequestMapping("iam")
+public class IamExample {
 
     private AwsCredentialsLoader loader;
-    private LambdaMapper mapper;
+    private IamMapper mapper;
 
-    public LambdaExample(AwsCredentialsLoader loader,
-                         LambdaMapper mapper) {
+    public IamExample(AwsCredentialsLoader loader,
+                      IamMapper mapper) {
         this.loader = loader;
         this.mapper = mapper;
     }
 
-    private LambdaClient getClient() {
-        return LambdaClient.builder()
+    private IamClient getClient() {
+        return IamClient.builder()
                 .credentialsProvider(loader.getCredentialsProvider())
-                .region(Region.EU_CENTRAL_1)
+                .region(Region.AWS_GLOBAL)
                 .build();
     }
 
     @GetMapping("list")
-    public List<LambdaFunction> listFunctions() {
-        return getClient().listFunctions()
-                .functions()
+    public List<IamUser> listUsers() {
+        return getClient().listUsers().users()
                 .stream()
-                .map(mapper::toLambdaFunction)
+                .map(mapper::toIamUser)
                 .collect(Collectors.toList());
     }
 

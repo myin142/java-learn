@@ -1,4 +1,4 @@
-package com.java.learn.lambda;
+package com.java.learn.aws.lambda;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

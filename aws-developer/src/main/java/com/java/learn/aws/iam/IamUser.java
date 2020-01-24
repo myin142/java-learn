@@ -1,4 +1,4 @@
-package com.java.learn.iam;
+package com.java.learn.aws.iam;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

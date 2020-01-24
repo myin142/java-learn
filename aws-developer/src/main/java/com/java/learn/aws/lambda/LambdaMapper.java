@@ -1,4 +1,4 @@
-package com.java.learn.lambda;
+package com.java.learn.aws.lambda;
 
 import org.mapstruct.Mapper;
 import software.amazon.awssdk.services.lambda.model.FunctionConfiguration;

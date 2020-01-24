@@ -1,4 +1,4 @@
-package com.java.learn.iam;
+package com.java.learn.aws.iam;
 
 import org.mapstruct.Mapper;
 import software.amazon.awssdk.services.iam.model.User;

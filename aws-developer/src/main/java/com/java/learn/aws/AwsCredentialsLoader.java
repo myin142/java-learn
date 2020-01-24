@@ -1,4 +1,4 @@
-package com.java.learn;
+package com.java.learn.aws;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
