@@ -61,6 +61,20 @@ References and samples for common design patterns.
  
  
 #### Abstract Factory
+Provides interface for creating families of related or dependent objects without specifying concrete classes
+
+Use when
+ - System should be independent of how products are created, composed and represented
+ - System should be configured with one of multiple families of products
+ - Family of related product objects is designed to be used together and should be enforced
+ - Want to provide a class library of products and only reveal their interfaces
+ 
+Consequences
+ - It isolates concrete classes
+ - It makes exchanging product families easy
+ - It promotes consistency among products
+ - Supporting new kinds of products is difficult
+
 #### Adapter
 #### Bridge
 #### Builder 
