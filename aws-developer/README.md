@@ -465,8 +465,20 @@
     - Endpoints: API Gateway, IoT, Step Functions, Alexa
     - Dev. and Management Tools: CloudFormation, CloudTrail, CodeCommit, CloudWatch
     - Event/Message: SES, SNS, SQS, Cron Events
- - Version Control
+ - Version Control, Aliases
+    - Only `$LATEST` version editable
+    - After publish immutable
+    - Qualified ARN - ARN with version suffix
+    - Unqualified ARN - ARN without version suffix
+    - Alias can be (re)mapped to version, can split traffic to 2 versions
+ - Throttling
  - Layers: share code (Frameworks, SDKs, Libraries, ...) across multiple functions
+ - Pay for requests, duration of execution (rounded to nearest 100ms) and amount of memory to allocate to function
+ - Can run between 1 second and 15 minutes
+ - Provisioned Concurrency: greater control over performance of serverless applications
+    - keeps functions initialized and hyper-ready to response
+    - ideal for building latency-sensitive applications (web or mobile backends)
+ - Lambda@Edge: run code close to user, feature of [CloudFront](#cloud-front)
     
 ##### API Gateway
  - API Service for REST, SOAP, Websocket
