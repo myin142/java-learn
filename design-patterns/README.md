@@ -85,6 +85,21 @@ Implementation Tips
 #### Adapter
 #### Bridge
 #### Builder 
+Separate construction of complex object so the same construction process can create different representations
+
+Use when
+ - Algorithm for creating complex object should be independent of the parts and how they are assembled
+ - Construction process must allow different representations for the object constructed
+ 
+Consequences
+ - Lets you vary product's internal representation
+ - Isolates code for construction and representation
+ - Gives you finer control over construction process
+ 
+Implementation Tips
+ 
+![Builder](./img/builder.png)
+
 #### Chain of Responsibility
 #### Command
 #### Composite
