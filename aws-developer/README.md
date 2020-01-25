@@ -172,6 +172,8 @@
  
 ##### Cognito
  - User Pools - Identity Pools
+    - Allows unauthenticated identities
+    - Authentication Flow: Enhanced and Basic
  - For Web and Mobile Applications
  - Web Identity Federation (Amazon, Facebook, Google)
  - SAML 2.0-based Federation (Microsoft Active Directory, LDAPS, Open LDAP)
