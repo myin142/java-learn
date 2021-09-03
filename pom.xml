@@ -11,10 +11,12 @@
 
     <modules>
         <module>java8</module>
-        <module>java11</module>
         <module>design-patterns</module>
         <module>aws-developer</module>
         <module>google-cloud</module>
+        <module>java11/game-engine</module>
+        <module>java11/text-game</module>
+        <module>java11/game-cli</module>
     </modules>
 
     <properties>
@@ -27,6 +29,8 @@
         <lombok.version>1.18.10</lombok.version>
         <spring.boot.version>2.1.8.RELEASE</spring.boot.version>
         <junit.version>5.6.0</junit.version>
+        <mockito.version>3.3.3</mockito.version>
+        <awaitility.version>4.1.0</awaitility.version>
     </properties>
 
     <dependencyManagement>
@@ -54,8 +58,38 @@
                 <artifactId>junit-jupiter-api</artifactId>
                 <version>${junit.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-junit-jupiter</artifactId>
+                <version>${mockito.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.awaitility</groupId>
+                <artifactId>awaitility</artifactId>
+                <version>${awaitility.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-junit-jupiter</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.awaitility</groupId>
+            <artifactId>awaitility</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>

@@ -4,8 +4,8 @@ package com.java.learn.java8.basic;
 // Import: Optional, has to be after package (needs full packages name)
 //      Wildcards must be at the end
 //      Specific import prefered over wildcards (when conflicting class names)
-import root.*;
-import root.basic.General;
+import com.java.learn.java8.*;
+import com.java.learn.java8.basic.General;
 
 // Import Static: Used to import static members
 import static java.lang.System.out;
@@ -34,7 +34,7 @@ public class General{
 
     // Java is:
 	//		pass-by-value
-	//		case-sensitive 
+	//		case-sensitive
 
     // Benefits of Java
     //		Object Oriented
